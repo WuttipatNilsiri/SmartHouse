@@ -33,6 +33,9 @@ $(function(){
                     },
                     dataType: "text",
                     success: function (response) {
+
+
+                       
                         
                         console.log(response)
                     },
@@ -114,7 +117,7 @@ $(function(){
         
         $.ajax({
             type: "GET",
-            url: "http://ecourse.cpe.ku.ac.th:1515/api/tpalm-door_press_nodepost/view/",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tpalm-door_press_webpost/view/",
             dataType: "text",
             
             success: function (response) {
@@ -170,7 +173,7 @@ $(function(){
         
         $.ajax({
             type: "GET",
-            url: "http://ecourse.cpe.ku.ac.th:1515/api/tpalm-sound_nodepost/view/",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tpalm-sound_webpost/view/",
             dataType: "text",
             
             success: function (response) {
