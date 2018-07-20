@@ -9,42 +9,80 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
-
+  <link rel="stylesheet" href="./stylee.css">
   <title>Smart house</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <div class="text-center">
-    <h1>
-      <div class="p-3 mb-2 bg-info text-white">Smart House</div>
-  </div>
-  </h1>
-  <div class="container" id="page">
-    <button type="button" id="bell" class="btn btn-primary">Ring the bell</button>
-    <button type="button" id="air" class="btn btn-primary">Air-conditioner</button>
-    <button type="button" id="light" class="btn btn-primary">light</button>
-    <button type="button" id="door" class="btn btn-primary">door</button>
-    <button type="button" id="dashboard" class="btn btn-primary">dashboard</button>
-  </div>
-  <div>
-    <div id="bellShow"></div>
-    <div id="airShow"></div>
-    <div id="lightShow"></div>
-    <div id="doorShow"></div>
 
-  </div>
+  <div class="page">
+    <div style="text-align: right;">
+      <button type="button" id="dashboard" class="btn btn-primary">dashboard</button>
 
+    </div>
+    <div align="center">
+      <h1>WELCOME HOME
+        <span class="badge badge-secondary"></span>
+      </h1>
+    </div>
+    <div class="container-fluid">
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <!-- bell -->
+      <div id="dashboard_row_style" class='row'>
+        <div class='col-6'>
+          <div class="container-fluid" id="centered">
+            <img src="https://image.flaticon.com/icons/svg/61/61073.svg" height="200">
+            <br>
+            <br>
+            <button type="button" id="bell" class="btn btn-primary">Ring the bell</button>
+            <div>
+            </div>
+          </div>
+        </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-    crossorigin="anonymous"></script>
-  <script src="req.js"></script>
+        <!-- air conditioner -->
+        <div id="dashboard_row_style" class='row'>
+          <div class='col-6'>
+            <div class="container-fluid" id="centered">
+              <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/122848-200.png" height="200">
+              <br>
+              <br>
+              <button type="button" id="air" class="btn btn-primary">Air-conditioner</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- light -->
+        <div id="dashboard_row_style" class='row'>
+          <div class='col-6'>
+            <img src="data:image/png;base64,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">
+            <br>
+            <br>
+            <button type="button" id="light" class="btn btn-primary">light</button>
+          </div>
+
+          <!-- door -->
+          <div id="dashboard_row_style" class='row'>
+          <div class='col-6'>
+            <img src="https://image.flaticon.com/icons/svg/59/59801.svg" height="200">
+            <br>
+            <br>
+            <button type="button" id="door" class="btn btn-primary">door</button>
+          </div>
+        
+
+      </div>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+      <!-- <script src="req.js"></script> -->
 </body>
 
 </html>
