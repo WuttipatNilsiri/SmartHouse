@@ -1,0 +1,21 @@
+#box {
+    overflow: hidden;
+}
+
+.page {
+    max-width: 800px;
+    margin: auto;
+}
+
+#dashboard_row_style {
+    height: 400px !important;
+    text-align: center;
+}
+
+#centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
