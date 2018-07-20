@@ -11,14 +11,23 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="./stylee.css">
   <title>Smart house</title>
-  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
+
   <div class="page">
-    <div style="text-align: right;">
-      <button type="button" id="dashboard" class="btn btn-primary" data-toggle="modal" data-target="#dashboard_modal" data-whatever="@mdo">dashboard</button>
+
+    <div class="container">
+
+      <div class="p-3 mb-2 bg-info text-white">
+        <h1>Welcome Home
+            <button type="button" id="dashboard" class="btn btn-primary float-right" data-toggle="modal" data-target="#dashboard_modal"
+            data-whatever="@mdo">dashboard</button>
+        </h1>
+       
+      </div>
+
       <div class="modal fade" id="dashboard_modal" tabindex="-1" role="dialog" aria-labelledby="dashboard_modal_label" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -29,12 +38,14 @@
               </button>
             </div>
             <div class="modal-body">
+
                 <div id="result">
                     <div id = "lightSta"></div>
                     <div id = "bellSta"></div>
                     <div id = "doorSta"></div>
                     <div id = "airSta"></div>
                 </div>
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -45,21 +56,18 @@
       </div>
 
     </div>
-    <div align="center">
-      <h1>WELCOME HOME
-        <span class="badge badge-secondary"></span>
-      </h1>
-    </div>
-    <div class="container-fluid">
 
+    <div class="container-fluid">
       <!-- bell -->
       <div id="dashboard_row_style" class='row'>
         <div class='col-6'>
           <div class="container-fluid" id="centered">
             <img id = "bellImg" src="./asset/bellOFF.png" height="200px">
             <br>
+            <input class="mt-4 textArea" id="bellStatus" height="2cm" width="3cm">
+            </textarea>
             <br>
-            <button type="button" id="bell" class="btn btn-primary">Ring the bell</button>
+            <button type="button" id="bell" class="btn btn-primary" style="margin-top: 3px">Ring the bell</button>
             <div>
             </div>
           </div>
@@ -70,10 +78,13 @@
           <div class="container-fluid" id="centered">
             <img id = "airImg" src="./asset/airOFF.png" height="200px">
             <br>
+            <input class="mt-4 textArea" id="airStatus" height="2cm" width="3cm">
+            </textarea>
             <br>
-            <button type="button" id="air" class="btn btn-primary">Air-conditioner</button>
+            <button type="button" id="air" class="btn btn-primary" style="margin-top: 3px">Air-conditioner</button>
           </div>
         </div>
+
       </div>
 
       <!-- light -->
@@ -81,18 +92,30 @@
         <div class='col-6'>
           <img id = "lightImg" height="200px" src="./asset/lightOFF.png">
           <br>
+          
+          <input class="mt-4 textArea" id="lightStatus" height="2cm" width="3cm">
+            </textarea>
+          
           <br>
           <button type="button" id="light" class="btn btn-primary">light</button>
         </div>
 
+
+
+        </div>
         <!-- door -->
         <div class='col-6'>
+
           <img id = "doorImg" src="./asset/doorCLOSE.png" height="200ox">
           <br>
+          <input class="mt-4 textArea" id="doorStatus" height="2cm" width="3cm">
+            </textarea>
           <br>
           <button type="button" id="door" class="btn btn-primary">door</button>
+
         </div>
       </div>
+    </div>
 
 
       <!-- Optional JavaScript -->
