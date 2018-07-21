@@ -1,0 +1,1 @@
+$("#yourModal").modal("hide")
