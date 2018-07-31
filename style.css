@@ -1,0 +1,26 @@
+.margin{  
+   margin: 30px;
+   padding: 20px; 
+}
+
+.borderRight{
+    border-right: solid;
+}
+
+.bg{
+
+    background-image: url(./9palmiyeagaci2.jpg);
+    background-repeat: no-repeat;
+    background-size: 1540px 600px;
+
+    
+}
+
+.center{
+    text-align: center;
+    padding-left: 700px;
+    padding-bottom: 130px;
+}
+
+
+
