@@ -129,7 +129,7 @@ $(function () {
             url: URL + keyNumBox + "/view/", 
             dataType: "text", 
             success: function (response) { 
-                $('#displayBox').html(`${response} กระถาง`)
+                $('#display').html(`${response} กระถาง`)
                 console.log("Num Box"+response) 
             }, 
             fail: function(response) { 
@@ -143,18 +143,38 @@ $(function () {
 
     },5000,timeout=3000) 
 
-    // var i = 100
-    // $('#fff').on('click',function(){
+    $('#startBtn').on('click',function(){
         
-    //     if(i > 0)
-    //         i = i - 20
-    //     src = "./assets/images/progress/soil/"
-    //     src = src + i + ".png"
-    //     console.log(src)
-    //     $('#ImgA').attr('src',src)
+        $.ajax({ 
+            type: "POST",
+            url: URL+keyIsOn+"/set/",
+            data: {
+                value: 1
+            },
+            dataType:"text",
+            success:function(response){
+                console.log(response + " 1")
+            } 
+        })
         
 
-    // })
+    })
+    $('#stopBtn').on('click',function(){
+        
+        $.ajax({ 
+            type: "POST",
+            url: URL+keyIsOn+"/set/",
+            data: {
+                value: 0
+            },
+            dataType:"text",
+            success:function(response){
+                console.log(response + " 0")
+            } 
+        })
+        
+
+    })
 
 
 })
